@@ -9,7 +9,7 @@ VOLUME /etc
 RUN apt-get update \
     && apt-get -y upgrade \
     && apt-get -y install software-properties-common wget git curl jq \
-	&& apt-get -y install dnsutils net-tools
+    && apt-get -y install dnsutils net-tools \
     && add-apt-repository ppa:transmissionbt/ppa \
     && wget -O - https://swupdate.openvpn.net/repos/repo-public.gpg | apt-key add - \
     && echo "deb http://build.openvpn.net/debian/openvpn/stable xenial main" > /etc/apt/sources.list.d/openvpn-aptrepo.list \
