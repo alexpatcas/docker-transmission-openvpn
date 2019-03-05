@@ -1,5 +1,5 @@
-FROM ubuntu:16.04
-MAINTAINER Kristian Haugene
+FROM ubuntu:18.04
+MAINTAINER Alex Patcas
 
 VOLUME /data
 VOLUME /config
@@ -8,6 +8,7 @@ VOLUME /config
 RUN apt-get update \
     && apt-get -y upgrade \
     && apt-get -y install software-properties-common wget git curl jq \
+	&& apt-get -y install dnsutils net-tools
     && add-apt-repository ppa:transmissionbt/ppa \
     && wget -O - https://swupdate.openvpn.net/repos/repo-public.gpg | apt-key add - \
     && echo "deb http://build.openvpn.net/debian/openvpn/stable xenial main" > /etc/apt/sources.list.d/openvpn-aptrepo.list \
@@ -35,7 +36,8 @@ RUN apt-get update \
     && groupmod -g 1000 users \
     && useradd -u 911 -U -d /config -s /bin/false abc \
     && usermod -G users abc
-
+	
+COPY resolv.conf /etc/resolv.conf
 ADD openvpn/ /etc/openvpn/
 ADD transmission/ /etc/transmission/
 ADD tinyproxy /opt/tinyproxy/
@@ -129,7 +131,8 @@ ENV OPENVPN_USERNAME=**None** \
     TRANSMISSION_WEB_HOME= \
     DROP_DEFAULT_ROUTE= \
     WEBPROXY_ENABLED=false \
-    WEBPROXY_PORT=8888
+    WEBPROXY_PORT=8888 \
+	LOCAL_NETWORK=
 
 # Expose port and run
 EXPOSE 9091
