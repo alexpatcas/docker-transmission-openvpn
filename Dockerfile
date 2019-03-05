@@ -1,5 +1,4 @@
-FROM ubuntu:18.04
-MAINTAINER Alex Patcas
+FROM ubuntu:16.04
 
 VOLUME /data
 VOLUME /config
