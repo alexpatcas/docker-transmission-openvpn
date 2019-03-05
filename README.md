@@ -23,26 +23,6 @@ This image was created for my own use, but sharing is caring, so it had to be op
 It has now gotten quite popular, and that's great! But keeping it up to date, providing support, fixes
 and new features takes a lot of time.
 
-I'm therefore kindly asking you to donate if you feel like you're getting a good tool
-and you're able to spare some dollars to keep it functioning as it should. There's a couple of ways to do it:
-
-Become a patron, supporting the project with a small monthly amount.
-
-[![Donate with Patreon](images/patreon.png)](https://www.patreon.com/haugene)
-
-Make a one time donation through PayPal.
-
-[![Donate with PayPal](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=73XHRSK65KQYC)
-
-Or use this referral code to DigitalOcean and get 25$ in credits, if you're interested in a cloud setup.
-
-[![Credits on DigitalOcean](images/digitalocean.png)](https://m.do.co/c/ca994f1552bc)
-
-You can also help out by submitting pull-requests or helping others with
-open issues or in the gitter chat. A big thanks to everyone who has contributed so far!
-And if you could be interested in joining as collaborator, let me know.
-
-
 ## Run container from Docker registry
 The container is available from the Docker registry and this is the simplest way to get it.
 To run the container use this command:
