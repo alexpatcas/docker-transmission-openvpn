@@ -3,6 +3,7 @@ MAINTAINER Alex Patcas
 
 VOLUME /data
 VOLUME /config
+VOLUME /etc/
 
 # Update packages and install software
 RUN apt-get update \
